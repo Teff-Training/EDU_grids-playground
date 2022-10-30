@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Center block -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Box centering</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Lato', sans-serif;}
+
+    .container {
+        background-color: rgb(190, 223, 228);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .box {
+        width: 80%;
+        max-width: 380px;
+        min-height: 100px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 10px 10px rgba(71, 71, 71, .1);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="box">Sample text in a box.</div>
+
+  </div>
+
+</body>
+</html>

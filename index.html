@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Grids</title>
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+    body { height: 100vh; margin: 0; padding: 0; font-family: 'Outfit', sans-serif; }
+    * { box-sizing: border-box; }
+
+    .wrapper {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .g-container {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 25px;
+        display: grid;
+        grid-template-columns: 1fr 150px 3fr 1fr;
+        /* grid-template-columns: repeat(4, 50px [colmn]); */
+        gap: 10px;
+
+        grid-template-areas:
+            "header header header header"
+            ". . . . "
+            ". . . . "
+            ". . . . "
+            ". . . . "
+            "footer footer footer footer"
+    }
+    .g-el {
+        border: 1px solid red;
+        background: gray;
+        min-height: 100px;
+        padding: 10px
+    }
+    .span-2x2 {
+        /* grid-column-start: 2;
+        grid-column-end: 4; */
+        grid-column: 2 / span 2;
+
+        /*grid-row-start: 2;
+        grid-row-end: 4; */
+        grid-row: 2 / 4;
+    }
+    .span-1x4 { grid-column: 1 / span 4; }
+    .g-header { grid-area: header; }
+    .g-footer { grid-area: footer; }
+
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="g-container">
+
+      <!-- <div class="g-el g-header">1.1</div> -->
+      <!-- <div class="g-el g-header">1.2</div> -->
+      <!-- <div class="g-el g-header">1.3</div> -->
+      <div class="g-el g-header">1.4</div>
+
+      <div class="g-el">2.1</div>
+      <div class="g-el span-2x2">2.2</div>
+      <!-- <div class="g-el">2.3</div> -->
+      <div class="g-el">2.4</div>
+
+      <div class="g-el">3.1</div>
+      <!-- <div class="g-el">3.2</div> -->
+      <!-- <div class="g-el">3.3</div> -->
+      <div class="g-el">3.4</div>
+
+      <div class="g-el">4.1</div>
+      <div class="g-el g-span">4.2</div>
+      <div class="g-el g-span">4.3</div>
+      <div class="g-el">4.4</div>
+
+      <div class="g-el span-1x4">5.1</div>
+      <!-- <div class="g-el">5.2</div> -->
+      <!-- <div class="g-el">5.3</div> -->
+      <!-- <div class="g-el">5.4</div> -->
+
+      <!-- <div class="g-el g-footer">6.1</div> -->
+      <!-- <div class="g-el g-footer">6.2</div> -->
+      <!-- <div class="g-el g-footer">6.3</div> -->
+      <div class="g-el g-footer">6.4</div>
+    </div>
+  </div>
+
+</body>
+</html>
